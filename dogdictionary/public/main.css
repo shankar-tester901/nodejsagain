@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+  flex: 50%;
+  padding: 10px;
+}
+
+td {
+  height: 250px;
+  width: 250px;
+}
+
+#cssTable td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* container */
+.left-sidebar {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* columns */
+.left-sidebar > * {
+  width: 100%;
+  padding: 1rem;
+}
+
+/* tablet breakpoint */
+@media (min-width: 768px) {
+  .left-sidebar > *:nth-child(1) {
+    width: calc(100% / 3 * 2);
+  }
+  .left-sidebar > *:nth-child(2) {
+    width: calc(100% / 3);
+    order: -1;
+  }
+}
